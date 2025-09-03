@@ -1,0 +1,208 @@
+#wrap {}
+/*------------1행 */
+#wrap .row1 {background-image: url(../images/main.jpg);
+position: relative;}
+#wrap .row1 #visual {position:relative; z-index:200 ;}
+#wrap .row1::after {
+    content: ''; display: block; width: 100%; height:100% ;
+    background:linear-gradient(transparent,rgba(0,0,0,5));
+    position:absolute ; left:0 ; top:0 ;
+    z-index:100;/* position이 있어야 값을 줄수있음 */
+}
+#wrap .row1 #visual .logo {
+    width:130px ; height:120px ;
+}
+#wrap .row1 #visual .logo a {}
+#wrap .row1 #visual .logo a img {}
+#wrap .row1 #visual .title {
+    padding:100px 0;
+    text-align: center;
+    color: var(--color-white);
+    font-size: var(--main-title70-d);
+}
+#wrap .row1 #visual .title em {
+    font-size: var(--main-title70-d);
+    font-weight: var(--weight-bold);
+}
+#wrap .row1 #visual .sponsor_btn {
+margin: 0 auto 80px;
+
+}
+#wrap .row1 #visual .sponsor_btn img {
+    padding-left: 10px;
+}
+#wrap .row1 #visual .sponsor_btn img span {}
+#wrap .row1 #visual .sponsor_ques_btn {
+    width:419px ; height: 54px; color: var(--color-white);
+    float: right;
+    border-radius: 30px;
+    background-color: var(--color-black);
+    font-size: var(--main-question26-d);
+    flex-flow: row nowrap; gap: 10px;
+    display: flex; justify-content: center; align-items: center;
+}
+#wrap .row1 #visual .sponsor_ques_btn img {}
+#wrap .row1 #visual .sponsor_ques_btn img span {}
+/*------------2행 퀴즈 */
+/* 오른쪽 */
+#wrap .row2 {background-image: url(../images/quiz.png);}
+#wrap .row2 #quiz { 
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height:max-content ;
+    padding: 142px 0;
+color: var(--color-white);}
+    
+#wrap .row2 #quiz > * {border: 1px solid aqua;}
+#wrap .row2 #quiz .quiz_list {
+    color: var(--color-white);
+}
+#wrap .row2 #quiz .quiz_list h2 { }
+#wrap .row2 #quiz .quiz_list p {
+    text-align: center;
+    font-size: var(--main-question26-d);
+    margin-bottom: 12px;
+}
+#wrap .row2 #quiz .quiz_list #quiz_frm {
+    padding-left: 80px;
+}
+#wrap .row2 #quiz .quiz_list .lists {}
+#wrap .row2 #quiz .quiz_list .lists li {}
+#wrap .row2 #quiz .quiz_list .lists li input {}
+#wrap .row2 #quiz .quiz_list .lists li input[id^=q] {display: none;}
+#wrap .row2 #quiz .quiz_list .lists li input[id^=q]:checked + label {
+    background-image: url(../images/check_circle.png);
+}
+#wrap .row2 #quiz .quiz_list .lists li label {
+    background-image: url(../images/check_off.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    padding-left: 44px;
+    line-height:30px; display: inline-block;
+}
+
+#wrap .row2 #quiz .quiz_list #quiz_answer_btn {
+    width: 476px; height: 50px;
+    background-color: var(--color-black);
+    border-radius: 50px;
+    color: var(--color-white);
+    font-size: var(--main-question26-d);
+    margin-top: 12px;
+}
+/* 왼쪽 */
+#wrap .row2 #quiz .quiz_current { 
+    padding-right: 10px;
+}
+#wrap .row2 #quiz .quiz_current .status {
+    border-radius: 20px; overflow: hidden; float: right;
+    background-color: var(--color-white);
+    width:526px ;height:236px ;}
+#wrap .row2 #quiz .quiz_current .status dt {
+    width:auto; height: 64px ;
+    background:linear-gradient(90deg, var(--color-point-orange),var(--color-point-orange2));
+    color: #fff; display: flex; justify-content: center; align-items: center;
+    font-size: var(--main-question26-d);
+}
+#wrap .row2 #quiz .quiz_current .status dt img {
+    
+}
+#wrap .row2 #quiz .quiz_current .status dd {
+    color: var(--color-black); padding-top: 55px;
+    display: flex; justify-content: center; align-items: flex-end;
+    font-size: var(--main-sopnsor34-d);
+
+    
+}
+#wrap .row2 #quiz .quiz_current .status dd em {
+    font-size: var(--main-title70-d);
+    color: var(--color-point-orange);
+    font-weight: var(--weight-semibold);
+    
+}
+#wrap .row2 #quiz .quiz_current .status dd span {
+    font-size: var(--main-subtitle55-d);
+    color: var(--color-point-orange);
+    font-weight: var(--weight-semibold);
+}
+#wrap .row2 #quiz .quiz_current p {margin: 20px 0 0; float: right;}
+/*------------3행 동영상 */
+#wrap .row3 {background-image: url(../images/mom_baby.png);
+}
+#wrap .row3 #video { display: flex; flex-flow:column nowrap; align-items: center ;
+    }
+#wrap .row3 #video h2 {}
+#wrap .row3 #video iframe {
+    margin: 50px 0; 
+    width:862px; height: 458px;}
+#wrap .row3 #video .sponsor_btn{
+    justify-content: center;
+}
+/*------------4행 빙하면적감소 */
+#wrap .row4 {background-image: url(../images/black_main.png);}
+#wrap .row4 #twenty_years {
+    color: #fff;
+}
+#wrap .row4 #twenty_years h2 {text-align: left;}
+#wrap .row4 #twenty_years h2 em {font-weight: var(--weight-bold);
+    position: relative;
+    color: var(--color-black);}
+#wrap .row4 #twenty_years h2 em::after {
+    content: ''; display: inline-block;
+    background: var(--color-white);
+    position: absolute ; z-index:10;
+    left:0px; top:0; width: 100%;  height:100% ;
+}
+#wrap .row4 #twenty_years h2 em span {
+    color: var(--color-black);
+    position: relative; font-weight: var(--weight-bold);
+    z-index: 11;}
+#wrap .row4 #twenty_years h2+p {
+    margin: 50px 0;
+}
+#wrap .row4 #twenty_years p {}
+
+#wrap .row4 #twenty_years p img {}
+/*------------5행 빙하가 녹으면 */
+#wrap .row5 {}
+#wrap .row5 #disaster {}
+#wrap .row5 #disaster h2 {}
+#wrap .row5 #disaster h2+p { 
+    text-align: center; padding: 10px 0;}
+#wrap .row5 #disaster .msg_card_wrap {
+    display: flex; 
+}
+#wrap .row5 #disaster .msg_card_wrap li {
+    display: grid;
+    grid-template-columns: repeat(3,1fr); gap: 20px;
+    display: flex;
+    flex-flow: column;       /* 세로 정렬 (이미지 위, 글씨 아래) */
+    align-items: center;          /* 가운데 정렬 */
+    justify-content: center;      /* 수직 가운데 정렬 */
+}
+#wrap .row5 #disaster .msg_card_wrap li:nth-child(1) dl {
+    background-image: url(../images/bear_ice_card.png);
+}
+#wrap .row5 #disaster .msg_card_wrap li:nth-child(2) dl {
+    background-image: url(../images/bear_sec_card.png);
+}
+#wrap .row5 #disaster .msg_card_wrap li:nth-child(3) dl {
+    background-image: url(../images/people_trd_card.png);
+}
+#wrap .row5 #disaster .msg_card_wrap li dl::after {
+    background: linear-gradient(var(--color-black),transparent); content: ''; display: block;
+    position: absolute; left: 0; width: 100%; height:100% ; top: 0; z-index: 14;
+}
+#wrap .row5 #disaster .msg_card_wrap li dl {
+    width: 400px; height: 320px;
+    position: relative; z-index: 15;
+    color: #fff;
+}
+#wrap .row5 #disaster .msg_card_wrap li dl dt {
+    color: #fff;
+    
+
+}
+#wrap .row5 #disaster .msg_card_wrap li dl dd {
+
+}
+#wrap .row5 #disaster .msg_card_wrap li p {    background-color: var(--color-white);}

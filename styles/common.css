@@ -1,0 +1,73 @@
+/* 공통변수 */
+/* 색상 */
+:root {
+    --color-white:#fff;
+    --color-black:#000;
+    --color-point-orange:#f39300;
+    --color-point-orange2:#ff7300;
+    --color-gray-f5:#f5f5f5;
+    /* 글꼴(desktop) */
+    --main-title70-d:4.375rem;
+    --main-subtitle55-d:3.438rem;
+    --main-content20-d:1.25rem;
+    --main-sopnsor34-d:2.125rem;
+    --main-question26-d:1.625rem;
+    /* 글꼴(tablet) */
+    --main-title50-t:3.125rem;
+    --main-subtitle40-t:2.5rem;
+    --main-content16-t:1.0rem;
+    --main-sponsor22-t-m:1.375rem;
+    --main-question20-t-m:1.25rem;
+    /* 글꼴(mobile) */
+    --main-title30-m:1.875rem;
+    --main-subtitle25-m:1.875rem;
+    --main-content14-m:0.875rem;
+    /* 행간.자간.굵기 */
+    --line150:1.5;
+    --line130:1.3;
+    --letter-minus2:-0.02rem;
+    --weight-medium:500;
+    --weight-semibold:600;
+    --weight-bold:700;
+}
+/* 공통 common.css */
+/* 배경 */
+#wrap .bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;}
+#wrap .bg .container {
+    overflow: hidden;
+    padding: 150px 0 0;
+    max-width: 1250px; min-width: 320;
+    height: 100vh; margin: 0 auto;
+    background: rgba(255, 255, 1, 0.5);/* 테스트용 */
+}
+/* 후원버튼 */
+#wrap .bg .container .sponsor_btn {
+    background: linear-gradient(90deg,var(--color-point-orange), var(--color-point-orange2));
+    font-size: var(--main-sopnsor34-d);
+    font-weight: var(--weight-bold);
+    color:var(--color-white);
+    width:400px; height: 64px;
+    border-radius:50px;
+    display: flex; flex-flow: row nowrap; align-items:center; justify-content: center;
+    padding:15px }
+#wrap .bg .container .sponsor_btn img {
+    width: 24px; height: 24px;
+}
+#wrap .bg .container h2 {
+    text-align: center;
+    font-size: var(--main-subtitle55-d) ;
+    line-height:var(--line130) ;
+    letter-spacing:var(--letter-minus2);
+    font-weight: var(--weight-semibold);
+}
+#wrap .bg .container h2+p {
+    font-size: var(--main-sopnsor34-d);
+    font-weight: var(--weight-medium);
+    line-height: var(--line150);
+    letter-spacing: var(--letter-minus2);
+
+
+}
