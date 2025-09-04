@@ -3,7 +3,7 @@
 #wrap .row1 {background-image: url(../images/main.jpg);
 position: relative;}
 #wrap .row1 #visual {position:relative; z-index:200 ;}
-#wrap .row1::after {
+#wrap .row1::after { /* 배경에 효과넣을때 사용하는 속성 */
     content: ''; display: block; width: 100%; height:100% ;
     background:linear-gradient(transparent,rgba(0,0,0,5));
     position:absolute ; left:0 ; top:0 ;
@@ -45,27 +45,25 @@ margin: 0 auto 80px;
 #wrap .row1 #visual .sponsor_ques_btn img span {}
 /*------------2행 퀴즈 */
 /* 오른쪽 */
-#wrap .row2 {background-image: url(../images/quiz.png);}
+#wrap .row2 {background-image: url(../images/quiz.png); height:654px;}
 #wrap .row2 #quiz { 
     display: grid;
     grid-template-columns: repeat(2,1fr);
     height:max-content ;
-    padding: 142px 0;
-color: var(--color-white);}
+    padding-top: 142px ;
+    color: var(--color-white);}
     
-#wrap .row2 #quiz > * {border: 1px solid aqua;}
+#wrap .row2 #quiz > * {}
 #wrap .row2 #quiz .quiz_list {
     color: var(--color-white);
 }
 #wrap .row2 #quiz .quiz_list h2 { }
 #wrap .row2 #quiz .quiz_list p {
-    text-align: center;
+    text-align: left;
     font-size: var(--main-question26-d);
     margin-bottom: 12px;
 }
-#wrap .row2 #quiz .quiz_list #quiz_frm {
-    padding-left: 80px;
-}
+#wrap .row2 #quiz .quiz_list #quiz_frm {}
 #wrap .row2 #quiz .quiz_list .lists {}
 #wrap .row2 #quiz .quiz_list .lists li {}
 #wrap .row2 #quiz .quiz_list .lists li input {}
@@ -124,12 +122,13 @@ color: var(--color-white);}
     color: var(--color-point-orange);
     font-weight: var(--weight-semibold);
 }
-#wrap .row2 #quiz .quiz_current p {margin: 20px 0 0; float: right;}
+#wrap .row2 #quiz .quiz_current p {margin: 5px 0 0; float: right;}
 /*------------3행 동영상 */
 #wrap .row3 {background-image: url(../images/mom_baby.png);
 }
 #wrap .row3 #video { display: flex; flex-flow:column nowrap; align-items: center ;
     }
+#wrap .row3 #video img {padding-left: 10px;}
 #wrap .row3 #video h2 {}
 #wrap .row3 #video iframe {
     margin: 50px 0; 
@@ -163,22 +162,25 @@ color: var(--color-white);}
 
 #wrap .row4 #twenty_years p img {}
 /*------------5행 빙하가 녹으면 */
-#wrap .row5 {}
+#wrap .row5 {background-color: var(--color-gray-f5);}
 #wrap .row5 #disaster {}
-#wrap .row5 #disaster h2 {}
+#wrap .row5 #disaster h2 {
+    
+}
 #wrap .row5 #disaster h2+p { 
-    text-align: center; padding: 10px 0;}
+    margin: 40px 0;font-size: var(--main-content20-d);
+    text-align: center; padding: 10px 0;
+    /* 한줄 말줄임 처리(br제거) */
+   /*  width: 300px; */
+    /* white-space: nowrap; */ /* 공백을 줄바꿈 처리하지 않는 명령 */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */ /* 설정한 width기준 영역을 나간 글자를 말줄임 처리하기 */}
+#wrap .row5 #disaster h2+p br {}
 #wrap .row5 #disaster .msg_card_wrap {
-    display: flex; 
+    display:grid; grid-template-columns: repeat(3,1fr);
+    gap: 0 20px;
 }
-#wrap .row5 #disaster .msg_card_wrap li {
-    display: grid;
-    grid-template-columns: repeat(3,1fr); gap: 20px;
-    display: flex;
-    flex-flow: column;       /* 세로 정렬 (이미지 위, 글씨 아래) */
-    align-items: center;          /* 가운데 정렬 */
-    justify-content: center;      /* 수직 가운데 정렬 */
-}
+#wrap .row5 #disaster .msg_card_wrap li { padding-bottom:30px; background-color:var(--color-white);}
 #wrap .row5 #disaster .msg_card_wrap li:nth-child(1) dl {
     background-image: url(../images/bear_ice_card.png);
 }
@@ -190,19 +192,36 @@ color: var(--color-white);}
 }
 #wrap .row5 #disaster .msg_card_wrap li dl::after {
     background: linear-gradient(var(--color-black),transparent); content: ''; display: block;
-    position: absolute; left: 0; width: 100%; height:100% ; top: 0; z-index: 14;
+    position: absolute; left: 0; width: 100%; height:100% ; top: 0; z-index: 9;
 }
 #wrap .row5 #disaster .msg_card_wrap li dl {
-    width: 400px; height: 320px;
-    position: relative; z-index: 15;
-    color: #fff;
+    height: 320px; padding-top: 30px;
+    position: relative; text-align: center;
+    color: var(--color-white);
 }
 #wrap .row5 #disaster .msg_card_wrap li dl dt {
-    color: #fff;
-    
-
+    margin: 0 0 10px;
+    color:var(--color-white); position: relative;z-index: 10; /* z-index는 무조건 포지션이랑 같이 숫자큰게 우선순위 */
+    font-size: var(--main-title50-t); font-weight: var(--weight-bold);
+    line-height: var(--line-130);
 }
 #wrap .row5 #disaster .msg_card_wrap li dl dd {
+    font-size: var(--main-content20-d); position: relative;
+    color: var(--color-white);
+    z-index: 10;
 
 }
-#wrap .row5 #disaster .msg_card_wrap li p {    background-color: var(--color-white);}
+#wrap .row5 #disaster .msg_card_wrap li p {
+    background-color: var(--color-white);
+    font-size: var(--main-content20-d);
+    line-height:150%;
+    letter-spacing: var(--letter-minus2);
+    padding: 20px 10px 0;
+    max-height: 230px; /* 반응형인식 max */
+    /*말줄임(...)처리  */
+    /* overflow: hidden; */
+    /* display: -webkit-box; */ /* 브라우저 엔진명령 */
+    /* -webkit-line-clamp: 3; *//* 몇줄 초과시 말줄임 처리 */
+    /* -webkit-box-orient: vertical; *//* 글방향 */
+    /* text-overflow: ellipsis; */ /* 말줄임 속성 */
+    }

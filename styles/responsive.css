@@ -1,0 +1,62 @@
+/* =--------태블릿 */
+@media screen and (max-width:1250px) {
+    /* 공통 */
+    #wrap .bg .container h2 {font-size: var(--main-title50-t); font-weight: var(--weight-bold);}
+    #wrap .bg .container h2+p {font-size: var(--main-sponsor22-t-m); font-weight: var(--weight-medium);}
+    /* -1250-1행 */
+    #wrap .bg .container {padding:155px 80px 0;} /* 전체패딩 */ /* 전체 너비가 가변형, 좌우 여백 80px */
+    #wrap .row1 #visual .title {font-size: var(--main-title50-t);} /* 타이틀조정 */
+    #wrap .bg .container .sponsor_btn {width: 274px; height: 66px; font-size: var(--main-subtitle25-m);} /* 후원버튼 조정 */
+    #wrap .row1 #visual .sponsor_ques_btn {width: 372px; height: 74px; font-size:var(--main-sponsor22-t-m);}
+    /* -1250-2행 */
+    #wrap .row2 #quiz .quiz_list h2 {font-size: var(--main-subtitle40-t);}
+    #wrap .row2 #quiz .quiz_list p {font-size: var(--main-sponsor22-t-m);}
+    #wrap .row2 #quiz .quiz_list #quiz_answer_btn {width:400px ;height:50px ; font-size: var(--main-sponsor22-t-m);}
+    #wrap .row2 #quiz .quiz_current .status {width: 339px; height: 215px;}
+    #wrap .row2 #quiz .quiz_current .status dd em {font-size: var(--main-title50-t);}
+    #wrap .row2 #quiz .quiz_current .status dd span {font-size: var(--main-subtitle40-t);}
+    #wrap .row2 #quiz .quiz_current .status dd {font-size: var(--main-sponsor22-t-m);}
+    /* -1250-3행 */
+    #wrap .row3 #video iframe {width: 100%; height: 458px;}
+    /* -1250-4행 */
+    #wrap .row4 #twenty_years p img {width: 100%; height: 444px;}
+    /* -1250-5행 */
+    #wrap .row5 #disaster .msg_card_wrap li dl dt {font-size: var(--main-subtitle40-t);}
+    #wrap .row5 #disaster .msg_card_wrap li dl dd {font-size: var(--main-sponsor22-t-m);}
+    #wrap .row5 #disaster .msg_card_wrap li p {font-size: var(--main-content16-t); overflow: hidden; display: -webkit-box; -webkit-line-clamp:3; -webkit-box-orient: vertical;text-overflow: ellipsis;} 
+    #wrap .row5 #disaster .msg_card_wrap li {padding-bottom: 30px; background-color: var(--color-white);}
+}
+ /* end 1250 */
+/* =--------모바일 */
+@media screen and (max-width:1024px) {
+    /* m1024공통 */
+    #wrap .bg .container {padding:200px 15px 0;}
+    #wrap .bg .container h2 {font-size:var(--main-title30-m); font-weight: var(--weight-bold);}
+    /* m1024 1행 */ /* 이미지의 폭 변경시 이미지 태그는 100%, 필요한 경우 부모(블록)에만 px */
+    #wrap .row1 #visual .title em {font-size:var(--main-title30-m); font-weight: var(--weight-bold); ;}
+    #wrap .row1 #visual .logo {width: 50px;}
+    #wrap .row1 #visual .logo a img {width: 100%;}
+    #wrap .row1 #visual .title {font-size: var(--main-title30-m);}
+    #wrap .row1 #visual .sponsor_ques_btn {width: 274px; height: 41px; font-size:var(--main-content14-m);}
+    /* m1024 2행 */
+    #wrap .row2 #quiz {display: block; }
+    #wrap .row2 #quiz .quiz_list h2 {width: 100%;font-size: var(--main-subtitle25-m);font-weight: var(--weight-medium);}
+    #wrap .row2 #quiz .quiz_list #quiz_frm #quiz_answer_btn {width:100%; font-size: var(--main-content14-m);}
+    #wrap .row2 #quiz .quiz_current .status {width: 321px; height: 166px; margin: 30px auto 0; float: none;}
+    #wrap .row2 #quiz .quiz_current .status dt {font-size: var(--main-subtitle25-m);}
+    #wrap .row2 #quiz .quiz_current .status dd {padding-top:30px ;}
+    #wrap .row2 #quiz .quiz_current .status dd em {font-size: var(--main-title50-t);}
+    #wrap .row2 #quiz .quiz_current p {text-align: center;float: none;}
+    /* m1024 3헹 */
+    #wrap .row3 #video iframe {width: 100%; height: 458px;}
+    /* m1024 4행 */
+    /* m1024 5헹 */
+    #wrap .row5 #disaster {height: max-content; }
+    #wrap .row5 #disaster .msg_card_wrap {display: block;} /* 원래 기본구조 해제 */
+    #wrap .row5 #disaster .msg_card_wrap li dl {height: 300px; background-size: cover; background-position: center center;} /* 카드 부모 높이 조정 */ /* 백그라운드 사진 전체덮기 */ /* 포지션으로 사진 정중앙 고정 */
+    #wrap .row5 #disaster .msg_card_wrap li dl dt {font-size: var(--main-subtitle25-m);}
+    #wrap .row5 #disaster .msg_card_wrap li dl dd {font-size: var(--main-question20-t-m);}
+    #wrap .row5 #disaster .msg_card_wrap li p {font-size: var(--main-content14-m);} 
+    #wrap .row5 #disaster .msg_card_wrap li {margin: 0 0 20px; width: 100%; } /* 각 카드아래 마진주고 가로넓이 화면맞추기 */
+}
+    

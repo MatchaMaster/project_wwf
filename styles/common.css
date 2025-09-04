@@ -38,10 +38,10 @@
     background-position: center;}
 #wrap .bg .container {
     overflow: hidden;
-    padding: 150px 0 0;
-    max-width: 1250px; min-width: 320;
+    padding-top: 150px;
+    max-width: 1250px; min-width: 320px;
     height: 100vh; margin: 0 auto;
-    background: rgba(255, 255, 1, 0.5);/* 테스트용 */
+    /* background: rgba(255, 255, 1, 0.5);/* 테스트용 */ */
 }
 /* 후원버튼 */
 #wrap .bg .container .sponsor_btn {
